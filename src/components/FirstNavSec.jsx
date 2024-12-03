@@ -4,6 +4,8 @@ import CartLink from "./CartLink";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { change } from "../redux/slices/languageSlice";
+import React from 'react';
+
 function FirstNavSec() {
 
   const { t, i18n } = useTranslation();

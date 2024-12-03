@@ -3,7 +3,8 @@ import React, { lazy, memo, Suspense, useCallback, useEffect, useState } from 'r
 import { useInfiniteQuery } from 'react-query';
 import SalesCardPlaceholder from './SalesCardPlaceholder';
 import { TiArrowSortedUp } from "react-icons/ti";
-import useResponsiveLimit from '../hooks/useResponsiveLimit'
+import useResponsiveLimit from '../hooks/useResponsiveLimit';
+
 const SalesCard = lazy(() => import('./SalesCard'));
 
 const positionStyles = {

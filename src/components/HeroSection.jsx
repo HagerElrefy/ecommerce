@@ -1,6 +1,7 @@
 import { memo } from "react";
 import SuperSaleSection from "./SuperSaleSection";
 import { useTranslation } from 'react-i18next';
+import React from 'react';
 
 const HeroPicture = () => {
   const { t } = useTranslation();

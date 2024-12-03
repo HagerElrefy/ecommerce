@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { memo } from "react";
 import { useSelector } from "react-redux";
+import React from 'react';
 
 function CartLink() {
     const cartNumOfProducts = useSelector((state) => state.cart.cart);

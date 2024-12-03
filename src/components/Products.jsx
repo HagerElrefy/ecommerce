@@ -2,6 +2,7 @@ import axios from "axios";
 import { memo, useCallback } from "react";
 import { useInfiniteQuery } from "react-query";
 import ProductGridCard from "./ProductGridCard";
+import React from 'react';
 
 const Loading = () => {
     return (

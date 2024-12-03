@@ -1,5 +1,6 @@
 import { memo, useState } from "react";
 import Products from "./Products";
+import React from 'react';
 
 function BestSellers() {
     const [category , setCategory] = useState('all');

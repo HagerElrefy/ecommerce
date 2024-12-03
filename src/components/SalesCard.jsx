@@ -1,5 +1,6 @@
 import { memo } from "react";
 import useDiscount from "../hooks/useDiscount";
+import React from 'react';
 
 function SalesCard({ product, positionStyles }) {
   const [discount, priceBefore, priceAfter] = useDiscount(product.discountPercentage, product.price);

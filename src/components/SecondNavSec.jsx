@@ -1,6 +1,7 @@
 import { memo } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import React from 'react';
 
 function SecondNavSec() {
   const { t } = useTranslation();

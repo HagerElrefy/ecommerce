@@ -1,4 +1,5 @@
 import { memo } from "react"
+import React from 'react';
 
 function SalesCardPlaceholder({ positionStyles }) {
   return (
