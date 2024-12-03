@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "language": "Language",
+    "EN": "EN",
+    "AR": "AR",
+    "My profile": "My profile",
+    "logoAlt": "logo",
+    "links": {
+      "home": "HOME",
+      "favorites": "FAVORITES",
+      "contacts": "CONTACTS"
+    }
+  },
+  "HeroPicture": {
+    "title": "Super Flash Sale 50% Off", 
+    "alt": "Promotion"
+  },
+  "Footer": {
+    "contactUs": "Contact Us",
+    "followUs": "Follow Us",
+    "socialDescription": "Since the 1500s, when an unknown printer took a galley of type and scrambled.",
+    "socialMediaLink": "social media link",
+    "logoAlt": "E-Comm logo",
+    "logoDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "Information": "Information",
+    "Service": "Service",
+    "My Account": "My Account",
+    "Our Offers": "Our Offers",
+    "About Us": "About Us",
+    "Privacy Policy": "Privacy Policy",
+    "Terms & Conditions": "Terms & Conditions",
+    "footerText": "© 2018 Ecommerce theme by www.bisenbaev.com",
+    "eComm": "E-Comm",
+    "addressLine1": "4578 Marmora Road,",
+    "addressLine2": "Glasgow D04 89GR"
+  }
+}

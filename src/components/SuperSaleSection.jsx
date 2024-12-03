@@ -7,9 +7,9 @@ import useResponsiveLimit from '../hooks/useResponsiveLimit'
 const SalesCard = lazy(() => import('./SalesCard'));
 
 const positionStyles = {
-  1: { discountPos: "bottom-5", pricePos: "bottom-5 right-2 md:right-3 lg:right-5" },
-  2: { discountPos: "bottom-5 left-1/4 lg:left-1/3", pricePos: "top-5 right-2 md:right-3 lg:right-5" },
-  3: { discountPos: "top-5 lg:top-20 right-2 md:right-3 lg:right-5 lg:left-5", pricePos: "bottom-5 right-2 md:right-3 lg:right-5" },
+  1: { discountPos: "bottom-5", pricePos: "bottom-5 end-2 md:end-3 lg:end-5" },
+  2: { discountPos: "bottom-5 start-1/4 lg:start-1/3", pricePos: "top-5 end-2 md:end-3 lg:end-5" },
+  3: { discountPos: "top-5 lg:top-20 end-2 md:end-3 lg:end-5 lg:start-5", pricePos: "bottom-5 end-2 md:end-3 lg:end-5" },
 };
 
 const PlaceholderComponent = ({ limit }) => {
@@ -77,12 +77,13 @@ function SuperSaleSection() {
   };
 
   return (
-    <div className="mt-20 sm:-mt-5 md:-mt-10 lg:-mt-24 flex lg:justify-between items-center gap-2 px-6 sm:px-12 md:px-20 lg:px-32">
+    <div dir='ltr' className="mt-20 sm:-mt-5 md:-mt-10 lg:-mt-24 flex lg:justify-between items-center gap-2 px-6 sm:px-12 md:px-20 lg:px-32">
       <button
         onClick={handlePrev}
         disabled={currentPageIndex === 0 || isFetchingPreviousPage}
         className="rounded-full px-2 py-1 text-gray-400 hover:shadow-sm -rotate-90 hover:bg-gray-50"
-        id='previous'
+        id='prev'
+        aria-label="previous"
       >
         <TiArrowSortedUp />
       </button>
@@ -116,6 +117,7 @@ function SuperSaleSection() {
         disabled={!hasNextPage || isFetchingNextPage}
         className="rounded-full px-2 py-1 text-gray-400 hover:shadow-sm rotate-90 hover:bg-gray-50"
         id='next'
+        aria-label='next'
       >
         <TiArrowSortedUp />
       </button>

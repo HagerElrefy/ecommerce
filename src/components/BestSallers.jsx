@@ -8,7 +8,7 @@ function BestSellers() {
     }
     return (
         <>
-        <h4 className="text-center mb-5 font-bold text-3xl">BEST SELLER</h4>
+        <h3 className="text-center mb-5 font-bold text-3xl">BEST SELLER</h3>
         <Products/>
         </>
     );

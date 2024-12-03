@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "language": "اللغة",
+    "EN": "إنجليزي",
+    "AR": "عربي",
+    "My profile": "ملفي الشخصي",
+    "logoAlt": "الشعار",
+    "links": {
+      "home": "الرئيسية",
+      "favorites": "المفضلة",
+      "contacts": "جهات الاتصال"
+    }
+  },
+  "HeroPicture": {
+    "title": "خصم 50% في عرض الفلاش سوبر",
+    "alt": "ترويج"
+  },
+  "Footer": {
+    "contactUs": "اتصل بنا",
+    "followUs": "تابعنا",
+    "socialDescription": "منذ القرن الـ16، عندما أخذ طابعة غير معروفة طرازًا من الحروف وأربكها.",
+    "socialMediaLink": "رابط وسائل التواصل الاجتماعي",
+    "logoAlt": "شعار E-Comm",
+    "logoDescription": "لوريم إيبسوم هو نص وهمي يستخدم في صناعة الطباعة والنشر.",
+    "Information": "معلومات",
+    "Service": "خدمة",
+    "My Account": "حسابي",
+    "Our Offers": "عروضنا",
+    "About Us": "من نحن",
+    "Privacy Policy": "سياسة الخصوصية",
+    "Terms & Conditions": "الشروط والأحكام",
+    "footerText": "© 2018 قالب التجارة الإلكترونية بواسطة www.bisenbaev.com",
+    "eComm": "E-Comm",
+    "addressLine1": "4578 شارع مارمورا،",
+    "addressLine2": "غلاسكو D04 89GR"
+  }
+}
