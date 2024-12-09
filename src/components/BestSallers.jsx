@@ -56,7 +56,7 @@ function BestSellers() {
     return (
         <>
             <h3 className="text-center mb-5 font-bold text-3xl">BEST SELLER</h3>
-            <div className="flex flex-col justify-center gap-5 my-5 md:flex-row">{
+            <div className="flex flex-col justify-center items-center gap-5 my-5 md:flex-row">{
                 categories.map((categ, index) => (
                     <button key={index} className={`${categ.toLocaleLowerCase() === category && 'text-PrimaryBlue border-b-2 border-PrimaryBlue font-semibold'} text-lg`} onClick={handleCategory} value={categ.toLocaleLowerCase()}>{categ}</button>
                 ))
