@@ -33,5 +33,19 @@
     "eComm": "E-Comm",
     "addressLine1": "4578 شارع مارمورا،",
     "addressLine2": "غلاسكو D04 89GR"
+  },
+  "bestSeller": {
+    "bestSellers": "الأكثر مبيعاً",
+    "categories": {
+        "all": "الكل",
+        "beauty": "الجمال",
+        "furniture": "الأثاث",
+        "vehicle": "المركبات",
+        "smartphones": "الهواتف الذكية"
+    },
+    "loading": "جارٍ التحميل....",
+    "error": "حدث خطأ: {{message}}",
+    "loadMore": "تحميل المزيد",
+    "loadingMore": "جارٍ التحميل..."
   }
 }

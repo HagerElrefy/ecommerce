@@ -33,5 +33,19 @@
     "eComm": "E-Comm",
     "addressLine1": "4578 Marmora Road,",
     "addressLine2": "Glasgow D04 89GR"
+  },
+  "bestSeller": {
+    "bestSellers": "BEST SELLER",
+    "categories": {
+      "all": "All",
+      "beauty": "Beauty",
+      "furniture": "Furniture",
+      "vehicle": "Vehicle",
+      "smartphones": "Smartphones"
+    },
+    "loading": "LOADING....",
+    "error": "An error has occurred: {{message}}",
+    "loadMore": "Load More",
+    "loadingMore": "Loading..."
   }
 }
