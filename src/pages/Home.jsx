@@ -8,7 +8,7 @@ export default function Home() {
       <section className='mb-20'>
           <HeroSection/>
       </section>
-      <section>
+      <section className='mb-20 px-12 md:px-20 lg:px-32'>
           <BestSallers/>
       </section>
     </>
