@@ -47,5 +47,22 @@
     "error": "حدث خطأ: {{message}}",
     "loadMore": "تحميل المزيد",
     "loadingMore": "جارٍ التحميل..."
+  },
+  "cart": {
+    "product": "المنتج",
+    "unitPrice": "سعر الوحدة",
+    "qty": "الكمية",
+    "price": "السعر",
+    "delete": "حذف",
+    "favorite": "مفضل",
+    "decreaseQty": "تقليل الكمية",
+    "increaseQty": "زيادة الكمية",
+    "emptyMessage": "سلة التسوق فارغة. ابدأ بإضافة بعض المنتجات!",
+    "subtotal": "الإجمالي الفرعي",
+    "shippingFee": "رسوم الشحن",
+    "coupon": "كوبون",
+    "noCoupon": "لا يوجد",
+    "total": "الإجمالي",
+    "checkout": "الدفع"
   }
 }

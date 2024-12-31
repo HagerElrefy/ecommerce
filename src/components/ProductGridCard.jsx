@@ -7,14 +7,14 @@ import { addProductToFavorites } from '../redux/slices/favoriteSlice';
 import { addProductToCart } from '../redux/slices/cartSlice';
 import useDiscount from '../hooks/useDiscount';
 
-function ProductHovered({ isHovered, product }) {
+function ProductHovered({ isHovered, product , }) {
     const dispatch = useDispatch();
-    const handleAddToCart = useCallback(()=>dispatch(addProductToCart(product)),[dispatch,product])
+    const handleAddToCart = useCallback(()=>dispatch(addProductToCart({...product , QTY:1})),[dispatch,product])
     const handleAddToFavorites = useCallback(()=>dispatch(addProductToFavorites(product)),[dispatch,product])
     return (
         <div className={`absolute top-5 bottom-5 right-2 left-2 bg-white bg-opacity-95 flex flex-col gap-2 md:flex-row justify-center items-center text-PrimaryBlue ${isHovered ? 'flex' : 'hidden'}`}>
-            <button className='p-2 text-lg rounded-full border-2' onClick={handleAddToFavorites}><FaRegHeart /></button>
-            <button className='p-2 text-lg rounded-full border-2' onClick={handleAddToCart}><IoCartOutline /></button>
+            <button className='p-2 text-lg rounded-full border-2 hover:text-white hover:bg-PrimaryBlue' onClick={handleAddToFavorites}><FaRegHeart /></button>
+            <button className='p-2 text-lg rounded-full border-2 hover:text-white hover:bg-PrimaryBlue' onClick={handleAddToCart}><IoCartOutline /></button>
         </div>
     );
 }
@@ -35,8 +35,9 @@ function ProductGridCard({ product }) {
                     loading="lazy"
                     decoding="async"
                     width="300"
-                    height="255" />
-                <ProductHovered isHovered={isHovered} product={product} />
+                    height="255" 
+                    />
+                <ProductHovered isHovered={isHovered} product={{...product, priceAfter}}/>
             </div>
             <div className='px-5 py-2 flex flex-col gap-2'>
                 <p className="font-semibold">{product.title.length > 23 ? `${product.title.slice(0, 23)}...` : product.title}</p>

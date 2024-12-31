@@ -4,7 +4,7 @@ import SecondNavSec from './SecondNavSec'
 
 function NavBar() {
   return (
-    <header className=''>
+    <header>
         <FirstNavSec/>
         <SecondNavSec/>
     </header>

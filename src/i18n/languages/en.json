@@ -47,5 +47,22 @@
     "error": "An error has occurred: {{message}}",
     "loadMore": "Load More",
     "loadingMore": "Loading..."
+  },
+  "cart": {
+    "product": "Product",
+    "unitPrice": "Unit Price",
+    "qty": "QTY",
+    "price": "Price",
+    "delete": "Delete",
+    "favorite": "Favorite",
+    "decreaseQty": "Decrease Quantity",
+    "increaseQty": "Increase Quantity",
+    "emptyMessage": "Your cart is empty. Start adding some products!",
+    "subtotal": "Subtotal",
+    "shippingFee": "Shipping fee",
+    "coupon": "Coupon",
+    "noCoupon": "No",
+    "total": "Total",
+    "checkout": "Check Out"
   }
 }

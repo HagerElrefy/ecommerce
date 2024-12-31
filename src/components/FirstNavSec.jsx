@@ -15,17 +15,18 @@ function FirstNavSec() {
     dispatch(change());
   };
 
+
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center border-b px-4 md:px-32 py-2">
+    <div className="flex flex-col md:flex-row justify-between items-center border-b py-5 px-4 md:px-32">
       <select
-        aria-label={t("nav.language")} // Use "nav.language" key
+        aria-label={t("nav.language")} 
         name="language"
         id="lang"
         onChange={handleLang}
         className="mb-2 md:mb-0 text-sm md:text-base"
       >
-        <option value="en">{t("nav.EN")}</option> {/* Use "nav.EN" key */}
-        <option value="ar">{t("nav.AR")}</option> {/* Use "nav.AR" key */}
+        <option value="en">{t("nav.EN")}</option> 
+        <option value="ar">{t("nav.AR")}</option>
       </select>
       <ul className="flex flex-col md:flex-row justify-between items-center gap-5 text-xl md:text-base">
         <li>
@@ -33,7 +34,7 @@ function FirstNavSec() {
             <span className="text-lg">
               <FaRegUser />
             </span>{" "}
-            {t("nav.My profile")} {/* Use "nav.My profile" key */}
+            {t("nav.My profile")} 
           </NavLink>
         </li>
         <li>

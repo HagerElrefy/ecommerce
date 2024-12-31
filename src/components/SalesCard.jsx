@@ -23,8 +23,8 @@ function SalesCard({ product, positionStyles }) {
           src={product.thumbnail}
           alt={product.title}
           className="w-full aspect-[1.5] object-contain"
-          width="300"
-          height="255"
+          // width="300"
+          // height="255"
           loading="lazy"
           decoding="async"
         />

@@ -13,7 +13,6 @@ function MainLayout() {
   return (
     <div dir={language === 'en' ? 'ltr' : 'rtl'}>
       <QueryClientProvider client={productsClient} >
-        {console.log(language)}
         <NavBar />
         <main>
           <Outlet />
