@@ -13,7 +13,7 @@ function ProductGridCard({ product }) {
     const handleMouseOut = useCallback(() => setIsHovered(false), []);
     const handleGoToProduct = useNavigateToProducts(product.id);
     return (
-        <div className="border-2 border-gray-100 rounded-md flex flex-col gap-3 text-center" onClick={handleGoToProduct}>
+        <div className="border-2 border-gray-100 rounded-md flex flex-col gap-3 text-center">
             <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className='relative'>
                 <img
                     src={product.thumbnail}
@@ -26,7 +26,7 @@ function ProductGridCard({ product }) {
                     />
                 <ProductHovered isHovered={isHovered} product={{...product, priceAfter}}/>
             </div>
-            <div className='px-5 py-2 flex flex-col gap-2'>
+            <div className='px-5 py-2 flex flex-col gap-2' onClick={handleGoToProduct}>
                 <p className="font-semibold">{product.title.length > 23 ? `${product.title.slice(0, 23)}...` : product.title}</p>
                 <div className="flex gap-1 justify-center px-3 text-xl">
                     {[...Array(5)].map((_, index) => (

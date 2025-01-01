@@ -3,14 +3,14 @@ import { memo, useState } from 'react'
 import { IoMdStar } from 'react-icons/io';
 import useDiscount from '../hooks/useDiscount';
 import useSearchInFavOrCart from '../hooks/useSearchInFavOrCart';
-import IncrementAndDecrementProductCount from './IncrementAndDecrementProductCount';
+// import IncrementAndDecrementProductCount from './IncrementAndDecrementProductCount';
 import useAdd from '../hooks/useAdd';
 import { IoCartOutline } from 'react-icons/io5';
 import { FaRegHeart } from 'react-icons/fa';
 import { FaHeart } from 'react-icons/fa6';
 
 function ProductInfo(props) {
-    const { id, title, images, rating, stock, QTY, reviews, price, discountPercentage, availabilityStatus, category, brand, weight, dimensions, returnPolicy } = props
+    const { id, title, images, rating, reviews, price, discountPercentage, availabilityStatus, category, brand, weight, dimensions } = props
     const productDetails = [
         { label: 'Brand', value: brand },
         { label: 'Weight', value: weight },
@@ -24,7 +24,7 @@ function ProductInfo(props) {
     const handleChangePicture = useCallback((e) => {
         setPicture(e.target.src);
     }, []);
-    const [findINFavorites, findINCart] = useSearchInFavOrCart(id);
+    const [findINFavorites] = useSearchInFavOrCart(id);
     return (
         <div className='flex flex-col md:flex-row justify-between w-full'>
             <div className='flex flex-col gap-5 md:w-1/2'>
