@@ -34,23 +34,6 @@ function CartOrFavItemTableRow({ id, thumbnail, title, price, QTY, stock, priceA
       </div>
       <div className="table-cell align-middle">
           <IncrementAndDecrementProductCount productInfo = {{id,QTY,stock,showInTable:true}}/>
-        {/* <div className="flex items-center justify-center gap-3 bg-slate-100 rounded-lg w-fit">
-          <button
-            className="text-PrimaryBlue text-xl p-2 rounded hover:bg-blue-100 transition"
-            aria-label={t('cart.decreaseQty')}
-            onClick={handleDecrease}
-          >
-            <CgMathMinus />
-          </button>
-          <p className="font-bold text-gray-700 px-4">{QTY}</p>
-          <button
-            className="text-PrimaryBlue text-xl p-2 rounded hover:bg-blue-100 transition"
-            aria-label={t('cart.increaseQty')}
-            onClick={handleIncrease}
-          >
-            <GrFormAdd />
-          </button>
-        </div> */}
       </div>
       <div className="table-cell align-middle">
         <p className="font-bold text-gray-700">${totalProductPrice}</p>

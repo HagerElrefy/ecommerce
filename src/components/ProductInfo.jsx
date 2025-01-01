@@ -20,7 +20,7 @@ function ProductInfo(props) {
     ];
     const [discount, priceBefore, priceAfter] = useDiscount(discountPercentage, price);
     const [picture, setPicture] = useState(images[0]);
-    const [handleAddToCart, handleAddToFavorites] = useAdd(props);
+    const [handleAddToCart, handleAddToFavorites] = useAdd({...props , priceAfter});
     const handleChangePicture = useCallback((e) => {
         setPicture(e.target.src);
     }, []);

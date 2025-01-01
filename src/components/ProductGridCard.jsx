@@ -8,7 +8,6 @@ import ProductHovered from './ProductHovered';
 function ProductGridCard({ product }) {
     const [isHovered, setIsHovered] = useState(false);
     const [discount, priceBefore, priceAfter] = useDiscount(product.discountPercentage, product.price)
-
     const handleMouseOver = useCallback(() => setIsHovered(true), []);
     const handleMouseOut = useCallback(() => setIsHovered(false), []);
     const handleGoToProduct = useNavigateToProducts(product.id);

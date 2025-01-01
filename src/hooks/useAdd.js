@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import  { useCallback } from 'react'
 import { useDispatch } from 'react-redux';
 import { addProductToCart } from '../redux/slices/cartSlice';
 import { addProductToFavorites } from '../redux/slices/favoriteSlice';
@@ -6,6 +6,7 @@ import { addProductToFavorites } from '../redux/slices/favoriteSlice';
 function useAdd(product) {
     const dispatch = useDispatch();
     const handleAddToCart = useCallback((e) => {
+        console.log(product);
         dispatch(addProductToCart({ ...product, QTY: 1 }));
         e.stopPropagation();
     }, [dispatch, product])
