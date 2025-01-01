@@ -1,13 +1,12 @@
 import { memo } from 'react';
 import useCartControls from '../hooks/useCartControls';
 import { RiDeleteBin7Line } from 'react-icons/ri';
-import { GrFormAdd } from 'react-icons/gr';
-import { CgMathMinus } from 'react-icons/cg';
 import { useTranslation } from 'react-i18next';
+import IncrementAndDecrementProductCount from './IncrementAndDecrementProductCount';
 
 function CartCard({ id, thumbnail, title, price, QTY, stock, priceAfter, totalProductPrice }) {
   const { t } = useTranslation();
-  const [handleDelete, handleDecrease, handleIncrease] = useCartControls({ id, QTY, stock });
+  const [handleDelete,...others] = useCartControls({ id, QTY, stock });
 
   return (
     <div className="md:hidden flex w-full justify-between items-center p-3 gap-2 border rounded-lg my-10">
@@ -30,7 +29,8 @@ function CartCard({ id, thumbnail, title, price, QTY, stock, priceAfter, totalPr
         </div>
         <div className="flex justify-between items-center">
           <p className="font-bold text-PrimaryBlue">${priceAfter}</p>
-          <div className="flex items-stretch justify-evenly w-1/2 bg-slate-100 rounded-lg">
+          <IncrementAndDecrementProductCount productInfo = {{id,QTY,stock,showInTable:false}}/>
+          {/* <div className="flex items-stretch justify-evenly w-1/2 bg-slate-100 rounded-lg">
             <button
               className="text-PrimaryBlue rounded"
               aria-label={t('cart.decreaseQty')}
@@ -46,7 +46,7 @@ function CartCard({ id, thumbnail, title, price, QTY, stock, priceAfter, totalPr
             >
               <GrFormAdd />
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

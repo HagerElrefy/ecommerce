@@ -3,15 +3,15 @@ import CartOrFavItemTableRow from '../components/CartOrFavItemTableRow';
 import { useSelector } from 'react-redux';
 import TatalCartPrice from '../components/TatalCartPrice';
 import CartCard from '../components/CartCard';
-import { memo } from 'react';
+import { Fragment, memo } from 'react';
 
 const CartTableHeader = () => {
   const { t } = useTranslation();
   return (
     <div className="md:table-header-group hidden">
       <div className="table-row h-16 align-middle">
-        <div className="table-cell align-middle">
-          <p className="font-bold text-gray-700 text-center">{t('cart.product')}</p>
+        <div className="table-cell align-middle text-start">
+          <p className="font-bold text-gray-700">{t('cart.product')}</p>
         </div>
         <div className="table-cell align-middle"></div>
         <div className="table-cell align-middle"></div>
@@ -34,19 +34,18 @@ function Cart() {
   const cartProducts = useSelector((state) => state.cart.cart);
 
   return (
-    <div className="mb-20 px-12 md:px-20 lg:px-32 w-full">
+    <div className="mb-20 px-2 md:px-20 lg:px-32 w-full">
       {cartProducts.length > 0 ? (
         <>
-          <div className="md:table w-full border-collapse border-spacing-y-4">
+          <div className="md:table text-center w-full border-collapse border-spacing-4">
             <CartTableHeader />
             {cartProducts.map((product) => (
-              <>
-                <CartOrFavItemTableRow key={product.id} {...product} />
-                <CartCard key={product.id} {...product} />
-              </>
+              <Fragment key={product.id}>
+                <CartOrFavItemTableRow {...product} />
+                <CartCard {...product} />
+              </Fragment>
             ))}
           </div>
-
           <TatalCartPrice />
         </>
       ) : (

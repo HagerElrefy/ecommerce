@@ -1,17 +1,16 @@
 import { memo } from 'react';
-import { CgMathMinus } from 'react-icons/cg';
-import { GrFormAdd } from 'react-icons/gr';
 import { IoIosClose } from 'react-icons/io';
 import useCartControls from '../hooks/useCartControls';
 import { useTranslation } from 'react-i18next';
+import IncrementAndDecrementProductCount from './IncrementAndDecrementProductCount';
 
 function CartOrFavItemTableRow({ id, thumbnail, title, price, QTY, stock, priceAfter, totalProductPrice }) {
   const { t } = useTranslation();
-  const [handleDelete, handleDecrease, handleIncrease] = useCartControls({ id, QTY, stock });
+  const [handleDelete] = useCartControls({ id, QTY, stock });
 
   return (
     <div className="hidden md:table-row h-28 hover:bg-slate-50 align-middle border-t">
-      <div className="table-cell align-middle">
+      <div className="table-cell align-middle text-start">
         <button
           aria-label={t('cart.delete')}
           onClick={handleDelete}
@@ -27,14 +26,15 @@ function CartOrFavItemTableRow({ id, thumbnail, title, price, QTY, stock, priceA
           alt={`${title || t('cart.product')} thumbnail`}
         />
       </div>
-      <div className="table-cell align-middle">
+      <div className="table-cell align-middle text-start">
         <p className="font-bold text-gray-700">{title}</p>
       </div>
-      <div className="table-cell align-middle">
+      <div className="table-cell align-middle w-fit">
         <p className="font-bold text-gray-800">${priceAfter}</p>
       </div>
       <div className="table-cell align-middle">
-        <div className="flex items-center justify-center gap-3 bg-slate-100 rounded-lg w-fit">
+          <IncrementAndDecrementProductCount productInfo = {{id,QTY,stock,showInTable:true}}/>
+        {/* <div className="flex items-center justify-center gap-3 bg-slate-100 rounded-lg w-fit">
           <button
             className="text-PrimaryBlue text-xl p-2 rounded hover:bg-blue-100 transition"
             aria-label={t('cart.decreaseQty')}
@@ -50,7 +50,7 @@ function CartOrFavItemTableRow({ id, thumbnail, title, price, QTY, stock, priceA
           >
             <GrFormAdd />
           </button>
-        </div>
+        </div> */}
       </div>
       <div className="table-cell align-middle">
         <p className="font-bold text-gray-700">${totalProductPrice}</p>

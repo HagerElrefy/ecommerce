@@ -24,7 +24,7 @@ function TatalCartPrice() {
         </div>
         <div className="flex justify-between font-bold border-t pt-2">
           <p>{t('cart.total')} :</p>
-          <p>${totalPriceAfterDiscount + ShippingFee}</p>
+          <p>${(totalPriceAfterDiscount + ShippingFee).toFixed(2)}</p>
         </div>
       </div>
 

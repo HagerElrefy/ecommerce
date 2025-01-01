@@ -5,6 +5,7 @@ import Cart from "./pages/Cart";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import Favorites from "./pages/Favorites";
+import SingleProduct from "./pages/SingleProduct";
 function App() {
   const router = createBrowserRouter([
     {
@@ -14,6 +15,7 @@ function App() {
         { path: "/", element: <Home /> },
         { path: "cart", element: <Cart /> },
         {path: 'favorites' , element: <Favorites/>},
+        {path: 'items/:id' , element : <SingleProduct/>},
         {path : '*' , element:<p>not found</p>}
       ],
     },

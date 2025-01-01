@@ -1,6 +1,6 @@
 import { memo, useCallback, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { useSSR, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { FiMenu } from "react-icons/fi";
 import React from 'react';
 const links = [
