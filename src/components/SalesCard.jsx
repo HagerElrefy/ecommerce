@@ -1,6 +1,7 @@
-import { memo } from "react";
+import { memo, useCallback } from "react";
 import useDiscount from "../hooks/useDiscount";
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 
 function SalesCard({ product, positionStyles }) {
   const [discount, priceBefore, priceAfter] = useDiscount(product.discountPercentage, product.price);
@@ -14,9 +15,12 @@ function SalesCard({ product, positionStyles }) {
 
   //   return () => document.head.removeChild(link);
   // }, [product.thumbnail]);
-
+  const navigate = useNavigate();
+  const handleGoToProduct = useCallback(()=>{
+    navigate(`/items/${product.id}`);
+  },[navigate,product.id])
   return (
-    <div className="bg-gray-50 shadow-md relative w-full aspect-square py-5 px-2 md:px-3 lg:px-5 rounded-lg text-xs md:text-lg lg:text-xl flex flex-col justify-between">
+    <div onClick={handleGoToProduct} className="bg-gray-50 shadow-md relative w-full aspect-square py-5 px-2 md:px-3 lg:px-5 rounded-lg text-xs md:text-lg lg:text-xl flex flex-col justify-between">
       <h2 className="font-bold w-2/3">{product.title}</h2>
       <div className="flex-1 flex items-center">
         <img
