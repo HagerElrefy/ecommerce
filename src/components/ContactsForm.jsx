@@ -8,8 +8,8 @@ function ContactsForm() {
     const formik = useFormik({
         initialValues: {
             email: user.email || '',
-            message: user.firstName +'' + user.lastName || '',
-            fullName: ''
+            message: '',
+            fullName: user.firstName ? user.firstName +'' + user.lastName : ''
         },
         validationSchema: Yup.object({
             fullName: Yup.string()
